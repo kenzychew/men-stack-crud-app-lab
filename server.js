@@ -23,7 +23,12 @@ app.use(express.urlencoded({ extended: false }));
 
 //* routes
 app.get("/", (req, res) => {
-  res.send("Hello, friend!");
+  //   res.send("Hello, friend!");
+  res.render("index.ejs");
+});
+
+app.get("/cars/new", (req, res) => {
+  res.render("cars/new.ejs");
 });
 
 //* listen

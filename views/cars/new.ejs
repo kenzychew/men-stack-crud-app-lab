@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Car</title>
+  </head>
+  <body>
+    <h1>Create a new Car!</h1>
+    <form action="/cars" method="post">
+      <fieldset>
+        <legend>Cars</legend>
+        <label for="brand">Brand:</label>
+        <input type="text" name="brand" id="brand" />
+        <br />
+        <label for="model">Model:</label>
+        <input type="text" name="model" id="model" />
+        <br />
+        <label for="color">Color:</label>
+        <input type="text" name="color" id="color" />
+        <br />
+        <label for="mileage">Mileage:</label>
+        <input type="number" name="mileage" id="mileage" />
+        <br />
+        <label for="price">Price:</label>
+        <input type="number" name="price" id="price" />
+        <br />
+        <button type="submit">Add Car</button>
+      </fieldset>
+    </form>
+    <!-- views/cars/new.ejs -->
+    <a href="/cars/">Back to Cars</a>
+  </body>
+</html>
+
