@@ -31,6 +31,13 @@ app.get("/cars/new", (req, res) => {
   res.render("cars/new.ejs");
 });
 
+app.post("/cars", async (req, res) => {
+  console.log("body", req.body);
+  //   res.send("Car created");
+  await Car.create(req.body);
+  res.redirect("cars");
+});
+
 //* listen
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
